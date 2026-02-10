@@ -1,0 +1,3 @@
+/* Selection page tweaks */
+.features-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.feature-card h3{ margin-bottom: 6px; }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku Game - Easy (6x6)</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="../" class="logo-link">Sudoku</a>
+      </div>
+
+      <ul class="navbar-menu">
+        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../selection/" class="nav-link">Play</a></li>
+        <li class="nav-item"><a href="../rules/" class="nav-link">Rules</a></li>
+        <li class="nav-item"><a href="../high-scores/" class="nav-link">High Scores</a></li>
+        <li class="nav-item"><a href="../login/" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="../register/" class="nav-link">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="features">
+      <h1 class="page-title">Easy Mode (6×6)</h1>
+      <p style="color: rgba(229,231,235,.72); margin-top: 0;">
+        Static mock board. Inputs allow one digit (1–6).
+      </p>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 12px 0 14px;">
+        <div style="padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04);">
+          Time <span style="color: rgba(165,180,252,.95); font-weight: 800;">03:21</span>
+        </div>
+        <a class="cta-button" href="../hard-game/">Switch to Hard</a>
+        <a class="cta-button" href="../selection/">Back to Selection</a>
+      </div>
+
+      <div class="board board--6" aria-label="6 by 6 sudoku board">
+        <!-- Row 1 -->
+        <input class="cell fixed" value="1" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="4" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+
+        <!-- Row 2 -->
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="6" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="2" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+
+        <!-- Row 3 -->
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="5" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="1" readonly />
+
+        <!-- Row 4 -->
+        <input class="cell fixed" value="3" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="6" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+
+        <!-- Row 5 -->
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="1" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="4" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+
+        <!-- Row 6 -->
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="2" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-6]" maxlength="1" />
+        <input class="cell fixed" value="5" readonly />
+      </div>
+
+      <div style="margin-top: 14px;">
+        <a class="cta-button" href="../high-scores/">View High Scores</a>
+        <a class="cta-button" href="../rules/" style="margin-left:10px;">Read Rules</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
+  </footer>
+</body>
+</html>

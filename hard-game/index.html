@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku Game - Hard (9x9)</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="../" class="logo-link">Sudoku</a>
+      </div>
+
+      <ul class="navbar-menu">
+        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../selection/" class="nav-link">Play</a></li>
+        <li class="nav-item"><a href="../rules/" class="nav-link">Rules</a></li>
+        <li class="nav-item"><a href="../high-scores/" class="nav-link">High Scores</a></li>
+        <li class="nav-item"><a href="../login/" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="../register/" class="nav-link">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="features">
+      <h1 class="page-title">Hard Mode (9×9)</h1>
+      <p style="color: rgba(229,231,235,.72); margin-top: 0;">
+        Static mock board. Inputs allow one digit (no solving logic yet).
+      </p>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 12px 0 14px;">
+        <div style="padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04);">
+          Time <span style="color: rgba(165,180,252,.95); font-weight: 800;">12:34</span>
+        </div>
+        <a class="cta-button" href="../easy-game/">Switch to Easy</a>
+        <a class="cta-button" href="../selection/">Back to Selection</a>
+      </div>
+
+      <div class="board board--9" aria-label="9 by 9 sudoku board">
+        <!-- Row 1 -->
+        <input class="cell fixed" value="8" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="3" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="1" readonly />
+
+        <!-- Row 2 -->
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="7" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="9" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+
+        <!-- Row 3 -->
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="2" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="6" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+
+        <!-- Row 4 -->
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="1" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="4" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+
+        <!-- Row 5 -->
+        <input class="cell fixed" value="5" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="8" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="9" readonly />
+
+        <!-- Row 6 -->
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="1" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="6" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="2" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+
+        <!-- Row 7 -->
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="4" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="7" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+
+        <!-- Row 8 -->
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="9" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="2" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="5" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+
+        <!-- Row 9 -->
+        <input class="cell fixed" value="6" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="7" readonly />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+        <input class="cell fixed" value="3" readonly />
+      </div>
+
+      <div style="margin-top: 14px;">
+        <a class="cta-button" href="../high-scores/">View High Scores</a>
+        <a class="cta-button" href="../rules/" style="margin-left:10px;">Read Rules</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
+  </footer>
+</body>
+</html>
