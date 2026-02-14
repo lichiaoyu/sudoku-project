@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudoku Game - Selection</title>
   <link rel="stylesheet" href="../assets/css/global.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -12,63 +13,96 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="../" class="logo-link">Sudoku</a>
+        <a href="../" class="logo-link">
+          <i data-lucide="grid-3x3"></i>
+          Sudoku
+        </a>
       </div>
 
       <ul class="navbar-menu">
-        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="../selection/" class="nav-link active">Play</a></li>
-        <li class="nav-item"><a href="../rules/" class="nav-link">Rules</a></li>
-        <li class="nav-item"><a href="../high-scores/" class="nav-link">High Scores</a></li>
-        <li class="nav-item"><a href="../login/" class="nav-link">Login</a></li>
-        <li class="nav-item"><a href="../register/" class="nav-link">Register</a></li>
+        <li class="nav-item">
+          <a href="../" class="nav-link">
+            <i data-lucide="house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../selection/" class="nav-link active">
+            <i data-lucide="gamepad-2"></i>
+            <span>Play</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../rules/" class="nav-link">
+            <i data-lucide="notepad-text"></i>
+            <span>Rules</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../high-scores/" class="nav-link">
+            <i data-lucide="trophy"></i>
+            <span>High Scores</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../login/" class="nav-link">
+            <i data-lucide="log-in"></i>
+            <span>Login</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../register/" class="nav-link">
+            <i data-lucide="user-round-plus"></i>
+            <span>Register</span>
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <!-- Main Content -->
   <main class="main-content">
-    <section class="features">
+    <section class="page-section">
       <h1 class="page-title">Game Selection</h1>
-      <p style="color: rgba(229,231,235,.72); margin-top: 0;">
+      <p class="page-subtitle">
         Pick a puzzle. Any selection opens the Hard (9×9) mock page.
       </p>
 
-      <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-        <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Midnight Grid</a></h3>
-          <p>Author: Ava Lin</p>
-        </div>
+      <div class="selection-grid">
+        <a href="../hard-game/" class="game-card">
+          <h3>Midnight Grid</h3>
+          <p class="game-author">Author: Ava Lin</p>
+        </a>
 
-        <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Neon Numbers</a></h3>
-          <p>Author: Mason Park</p>
-        </div>
+        <a href="../hard-game/" class="game-card">
+          <h3>Neon Numbers</h3>
+          <p class="game-author">Author: Mason Park</p>
+        </a>
 
-        <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Quiet Logic</a></h3>
-          <p>Author: Nora Chen</p>
-        </div>
+        <a href="../hard-game/" class="game-card">
+          <h3>Quiet Logic</h3>
+          <p class="game-author">Author: Nora Chen</p>
+        </a>
 
-        <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Skyline Classic</a></h3>
-          <p>Author: Riley Stone</p>
-        </div>
+        <a href="../hard-game/" class="game-card">
+          <h3>Skyline Classic</h3>
+          <p class="game-author">Author: Riley Stone</p>
+        </a>
 
-        <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Coffee Break Sudoku</a></h3>
-          <p>Author: Theo Kim</p>
-        </div>
+        <a href="../hard-game/" class="game-card">
+          <h3>Coffee Break Sudoku</h3>
+          <p class="game-author">Author: Theo Kim</p>
+        </a>
 
-        <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Greenline Starter</a></h3>
-          <p>Author: Jun Park</p>
-        </div>
+        <a href="../hard-game/" class="game-card">
+          <h3>Greenline Starter</h3>
+          <p class="game-author">Author: Jun Park</p>
+        </a>
       </div>
 
-      <div style="margin-top: 14px;">
+      <div class="button-group">
         <a class="cta-button" href="../easy-game/">Try Easy (6×6)</a>
-        <a class="cta-button" href="../hard-game/" style="margin-left: 10px;">Try Hard (9×9)</a>
+        <a class="cta-button" href="../hard-game/">Try Hard (9×9)</a>
       </div>
     </section>
   </main>
@@ -76,5 +110,9 @@
   <footer class="footer">
     <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
   </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

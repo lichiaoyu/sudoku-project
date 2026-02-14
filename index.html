@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudoku Game - Home</title>
   <link rel="stylesheet" href="./assets/css/global.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -12,27 +13,48 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="./" class="logo-link">Sudoku</a>
+        <a href="./" class="logo-link">
+          <i data-lucide="grid-3x3"></i>
+          Sudoku
+        </a>
       </div>
 
       <ul class="navbar-menu">
         <li class="nav-item">
-          <a href="./" class="nav-link active">Home</a>
+          <a href="./" class="nav-link active">
+            <i data-lucide="house"></i>
+            <span>Home</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./selection/" class="nav-link">Play</a>
+          <a href="./selection/" class="nav-link">
+            <i data-lucide="gamepad-2"></i>
+            <span>Play</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./rules/" class="nav-link">Rules</a>
+          <a href="./rules/" class="nav-link">
+            <i data-lucide="notepad-text"></i>
+            <span>Rules</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./high-scores/" class="nav-link">High Scores</a>
+          <a href="./high-scores/" class="nav-link">
+            <i data-lucide="trophy"></i>
+            <span>High Scores</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./login/" class="nav-link">Login</a>
+          <a href="./login/" class="nav-link">
+            <i data-lucide="log-in"></i>
+            <span>Login</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./register/" class="nav-link">Register</a>
+          <a href="./register/" class="nav-link">
+            <i data-lucide="user-round-plus"></i>
+            <span>Register</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -42,7 +64,8 @@
   <main class="main-content">
     <section class="hero">
       <h1>Welcome to Sudoku</h1>
-      <p>Challenge your mind with the classic puzzle game.</p>
+      <p>A clean, calming Sudoku experience with a nature-inspired palette.</p>
+      <img src="./assets/images/sudoku-grid.png" alt="Sudoku puzzle with floral decorations" class="hero-image">
       <a href="./selection/" class="cta-button">Start Playing</a>
     </section>
 
@@ -72,5 +95,9 @@
   <footer class="footer">
     <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
   </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

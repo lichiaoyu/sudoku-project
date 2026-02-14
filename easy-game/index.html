@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudoku Game - Easy (6x6)</title>
   <link rel="stylesheet" href="../assets/css/global.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -12,31 +13,64 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="../" class="logo-link">Sudoku</a>
+        <a href="../" class="logo-link">
+          <i data-lucide="grid-3x3"></i>
+          Sudoku
+        </a>
       </div>
 
       <ul class="navbar-menu">
-        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="../selection/" class="nav-link">Play</a></li>
-        <li class="nav-item"><a href="../rules/" class="nav-link">Rules</a></li>
-        <li class="nav-item"><a href="../high-scores/" class="nav-link">High Scores</a></li>
-        <li class="nav-item"><a href="../login/" class="nav-link">Login</a></li>
-        <li class="nav-item"><a href="../register/" class="nav-link">Register</a></li>
+        <li class="nav-item">
+          <a href="../" class="nav-link">
+            <i data-lucide="house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../selection/" class="nav-link active">
+            <i data-lucide="gamepad-2"></i>
+            <span>Play</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../rules/" class="nav-link">
+            <i data-lucide="notepad-text"></i>
+            <span>Rules</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../high-scores/" class="nav-link">
+            <i data-lucide="trophy"></i>
+            <span>High Scores</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../login/" class="nav-link">
+            <i data-lucide="log-in"></i>
+            <span>Login</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../register/" class="nav-link">
+            <i data-lucide="user-round-plus"></i>
+            <span>Register</span>
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <!-- Main Content -->
   <main class="main-content">
-    <section class="features">
+    <section class="game-section">
       <h1 class="page-title">Easy Mode (6×6)</h1>
-      <p style="color: rgba(229,231,235,.72); margin-top: 0;">
+      <p class="page-subtitle">
         Static mock board. Inputs allow one digit (1–6).
       </p>
 
-      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 12px 0 14px;">
-        <div style="padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04);">
-          Time <span style="color: rgba(165,180,252,.95); font-weight: 800;">03:21</span>
+      <div class="game-controls">
+        <div class="timer-display">
+          Time <span class="timer-value">03:21</span>
         </div>
         <a class="cta-button" href="../hard-game/">Switch to Hard</a>
         <a class="cta-button" href="../selection/">Back to Selection</a>
@@ -92,9 +126,9 @@
         <input class="cell fixed" value="5" readonly />
       </div>
 
-      <div style="margin-top: 14px;">
+      <div class="button-group">
         <a class="cta-button" href="../high-scores/">View High Scores</a>
-        <a class="cta-button" href="../rules/" style="margin-left:10px;">Read Rules</a>
+        <a class="cta-button" href="../rules/">Read Rules</a>
       </div>
     </section>
   </main>
@@ -102,5 +136,9 @@
   <footer class="footer">
     <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
   </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
