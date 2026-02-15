@@ -1,76 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudoku Game - Home</title>
-  <link rel="stylesheet" href="./assets/css/global.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Sudoku - Peaceful Puzzles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
-
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-logo">
-        <a href="./" class="logo-link">Sudoku</a>
-      </div>
 
-      <ul class="navbar-menu">
-        <li class="nav-item">
-          <a href="./" class="nav-link active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="./selection/" class="nav-link">Play</a>
-        </li>
-        <li class="nav-item">
-          <a href="./rules/" class="nav-link">Rules</a>
-        </li>
-        <li class="nav-item">
-          <a href="./high-scores/" class="nav-link">High Scores</a>
-        </li>
-        <li class="nav-item">
-          <a href="./login/" class="nav-link">Login</a>
-        </li>
-        <li class="nav-item">
-          <a href="./register/" class="nav-link">Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <section class="hero">
-      <h1>Welcome to Sudoku</h1>
-      <p>Challenge your mind with the classic puzzle game.</p>
-      <a href="./selection/" class="cta-button">Start Playing</a>
-    </section>
-
-    <section class="features">
-      <h2>Features</h2>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Easy & Hard Modes</h3>
-          <p>Choose between easy 6×6 grids or challenging 9×9 puzzles.</p>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-link">
+                <i class="fas fa-seedling"></i> Garden Sudoku
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="selection/" class="nav-link"><i class="fas fa-play"></i> Play</a></li>
+                <li><a href="rules/" class="nav-link"><i class="fas fa-book-open"></i> Rules</a></li>
+                <li><a href="high-scores/" class="nav-link"><i class="fas fa-trophy"></i> High Scores</a></li>
+                <li><a href="login/" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="register/" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="feature-card">
-          <h3>Timer</h3>
-          <p>Track your completion time and compete with others.</p>
-        </div>
+    <main class="main-content">
+        <section class="hero-split">
+            <div class="hero-text">
+                <h1>Welcome to Garden Sudoku</h1>
+                <p>A peaceful and challenging puzzle experience in nature.</p>
+                <a href="selection/" class="cta-button">Play Now</a>
+            </div>
+            <div class="hero-figure">
+                <img src="assets/img/garden-sudoku.png" alt="Garden Sudoku" class="hero-image">
+            </div>
+        </section>
 
-        <div class="feature-card">
-          <h3>Leaderboard</h3>
-          <p>See how you rank against other players.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Easy & Hard Mode</h3>
+                    <p>All levels.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Track Your Time</h3>
+                    <p>Beat the clock.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Leaderboards</h3>
+                    <p>Top scores.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2026 Garden Sudoku Game. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

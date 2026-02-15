@@ -1,157 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudoku Game - Hard (9x9)</title>
-  <link rel="stylesheet" href="../assets/css/global.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Mode - Garden Sudoku</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/global.css">
 </head>
-
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-logo">
-        <a href="../" class="logo-link">Sudoku</a>
-      </div>
 
-      <ul class="navbar-menu">
-        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="../selection/" class="nav-link">Play</a></li>
-        <li class="nav-item"><a href="../rules/" class="nav-link">Rules</a></li>
-        <li class="nav-item"><a href="../high-scores/" class="nav-link">High Scores</a></li>
-        <li class="nav-item"><a href="../login/" class="nav-link">Login</a></li>
-        <li class="nav-item"><a href="../register/" class="nav-link">Register</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <section class="features">
-      <h1 class="page-title">Hard Mode (9×9)</h1>
-      <p style="color: rgba(229,231,235,.72); margin-top: 0;">
-        Static mock board. Inputs allow one digit (no solving logic yet).
-      </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 12px 0 14px;">
-        <div style="padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04);">
-          Time <span style="color: rgba(165,180,252,.95); font-weight: 800;">12:34</span>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../" class="logo-link"><i class="fas fa-seedling"></i> Garden Sudoku</a>
+            <ul class="navbar-menu">
+                <li><a href="../" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../selection/" class="nav-link active"><i class="fas fa-play"></i> Play</a></li>
+                <li><a href="../rules/" class="nav-link"><i class="fas fa-book-open"></i> Rules</a></li>
+                <li><a href="../high-scores/" class="nav-link"><i class="fas fa-trophy"></i> Scores</a></li>
+                <li><a href="../login/" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="../register/" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
+            </ul>
         </div>
-        <a class="cta-button" href="../easy-game/">Switch to Easy</a>
-        <a class="cta-button" href="../selection/">Back to Selection</a>
-      </div>
+    </nav>
 
-      <div class="board board--9" aria-label="9 by 9 sudoku board">
-        <!-- Row 1 -->
-        <input class="cell fixed" value="8" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="3" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="1" readonly />
+    <main class="main-content">
+        <div class="selection-box" style="background: rgba(52, 211, 153, 0.05); padding: 40px; border-radius: 24px; border: 1px solid var(--line);">
+            <div class="game-container" style="display: flex; flex-direction: column; align-items: center;">
+                <h2 style="margin-bottom: 20px;">Hard Mode (9x9)</h2>
+                
+                <div class="game-stats" style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <div class="stat-badge" style="background: var(--accent); color: white; padding: 8px 15px; border-radius: 12px;"><i class="fas fa-clock"></i> Time 12:34</div>
+                    <a href="../selection/" class="cta-button" style="padding: 8px 15px; font-size: 0.8rem; background: white; color: var(--accent); border: 2px solid var(--accent);">Back</a>
+                </div>
 
-        <!-- Row 2 -->
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="7" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="9" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+                <div class="sudoku-grid grid-9x9" style="display: grid; grid-template-columns: repeat(9, 50px); grid-template-rows: repeat(9, 50px); background-color: var(--text); border: 4px solid var(--text); gap: 1px;">
+                    <input type="text" class="sudoku-cell" value="8" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="3" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="1" disabled>
+                    <input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="7" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="9" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1">
+                    <input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="2" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="6" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1">
+                    <input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="1" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="4" disabled><input type="text" class="sudoku-cell" maxlength="1">
+                    <input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="5" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1">
+                    <input type="text" class="sudoku-cell" value="2" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="8" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1">
+                    <input type="text" class="sudoku-cell" value="5" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="8" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="9" disabled>
+                    <input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="1" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="6" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="2" disabled><input type="text" class="sudoku-cell" maxlength="1">
+                    <input type="text" class="sudoku-cell" value="4" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="7" disabled><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" maxlength="1"><input type="text" class="sudoku-cell" value="3" disabled>
+                </div>
 
-        <!-- Row 3 -->
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="2" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="6" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
+                <button class="cta-button" style="border:none; cursor:pointer; margin-top: 30px; padding: 15px 40px;">Check Solution</button>
+            </div>
+        </div>
+    </main>
 
-        <!-- Row 4 -->
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="1" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="4" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-
-        <!-- Row 5 -->
-        <input class="cell fixed" value="5" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="8" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="9" readonly />
-
-        <!-- Row 6 -->
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="1" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="6" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="2" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-
-        <!-- Row 7 -->
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="4" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="7" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-
-        <!-- Row 8 -->
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="9" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="2" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="5" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-
-        <!-- Row 9 -->
-        <input class="cell fixed" value="6" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="7" readonly />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell" inputmode="numeric" pattern="[1-9]" maxlength="1" />
-        <input class="cell fixed" value="3" readonly />
-      </div>
-
-      <div style="margin-top: 14px;">
-        <a class="cta-button" href="../high-scores/">View High Scores</a>
-        <a class="cta-button" href="../rules/" style="margin-left:10px;">Read Rules</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2026 Garden Sudoku Game.</p>
+    </footer>
 </body>
 </html>

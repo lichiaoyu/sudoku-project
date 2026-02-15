@@ -3,78 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudoku Game - Selection</title>
+  <title>Selection - Garden Sudoku</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/global.css" />
 </head>
 
 <body>
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="navbar-container">
-      <div class="navbar-logo">
-        <a href="../" class="logo-link">Sudoku</a>
-      </div>
+        <a href="../" class="logo-link">
+            <i class="fas fa-seedling"></i> Garden Sudoku
+        </a>
 
-      <ul class="navbar-menu">
-        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="../selection/" class="nav-link active">Play</a></li>
-        <li class="nav-item"><a href="../rules/" class="nav-link">Rules</a></li>
-        <li class="nav-item"><a href="../high-scores/" class="nav-link">High Scores</a></li>
-        <li class="nav-item"><a href="../login/" class="nav-link">Login</a></li>
-        <li class="nav-item"><a href="../register/" class="nav-link">Register</a></li>
-      </ul>
+        <ul class="navbar-menu">
+            <li><a href="../" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../selection/" class="nav-link active"><i class="fas fa-play"></i> Play</a></li>
+            <li><a href="../rules/" class="nav-link"><i class="fas fa-book-open"></i> Rules</a></li>
+            <li><a href="../high-scores/" class="nav-link"><i class="fas fa-trophy"></i> High Scores</a></li>
+            <li><a href="../login/" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><a href="../register/" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
+        </ul>
     </div>
-  </nav>
+</nav>
 
-  <!-- Main Content -->
   <main class="main-content">
-    <section class="features">
-      <h1 class="page-title">Game Selection</h1>
-      <p style="color: rgba(229,231,235,.72); margin-top: 0;">
-        Pick a puzzle. Any selection opens the Hard (9×9) mock page.
-      </p>
+    <div class="selection-box" style="background: rgba(45, 62, 45, 0.05); padding: 30px; border-radius: 24px; border: 1px solid var(--line);">
+      <h1 class="page-title" style="text-align: left; margin-bottom: 5px;">Game Selection</h1>
+      <p style="color: var(--text); opacity: 0.7; margin-bottom: 25px;">Pick a puzzle. Each card features a unique challenge.</p>
 
-      <div class="features-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+      <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); gap: 15px;">
+        
         <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Midnight Grid</a></h3>
-          <p>Author: Ava Lin</p>
+          <h3 style="margin-bottom: 8px;">
+            <a href="../hard-game/" class="select-link"><i class="fas fa-spa"></i> Midnight Grid</a>
+          </h3>
+          <p><i class="fas fa-user-edit" style="font-size: 0.7rem;"></i> Author: Ava Lin</p>
         </div>
 
         <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Neon Numbers</a></h3>
-          <p>Author: Mason Park</p>
+          <h3 style="margin-bottom: 8px;">
+            <a href="../hard-game/" class="select-link"><i class="fas fa-cloud-moon"></i> Neon Numbers</a>
+          </h3>
+          <p><i class="fas fa-user-edit" style="font-size: 0.7rem;"></i> Author: Mason Park</p>
         </div>
 
         <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Quiet Logic</a></h3>
-          <p>Author: Nora Chen</p>
+          <h3 style="margin-bottom: 8px;">
+            <a href="../hard-game/" class="select-link"><i class="fas fa-wind"></i> Quiet Logic</a>
+          </h3>
+          <p><i class="fas fa-user-edit" style="font-size: 0.7rem;"></i> Author: Nora Chen</p>
         </div>
 
         <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Skyline Classic</a></h3>
-          <p>Author: Riley Stone</p>
+          <h3 style="margin-bottom: 8px;">
+            <a href="../hard-game/" class="select-link"><i class="fas fa-mountain"></i> Skyline Classic</a>
+          </h3>
+          <p><i class="fas fa-user-edit" style="font-size: 0.7rem;"></i> Author: Riley Stone</p>
         </div>
 
         <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Coffee Break Sudoku</a></h3>
-          <p>Author: Theo Kim</p>
+          <h3 style="margin-bottom: 8px;">
+            <a href="../hard-game/" class="select-link"><i class="fas fa-coffee"></i> Coffee Break</a>
+          </h3>
+          <p><i class="fas fa-user-edit" style="font-size: 0.7rem;"></i> Author: Theo Kim</p>
         </div>
 
         <div class="feature-card">
-          <h3><a href="../hard-game/" class="nav-link" style="padding:0; border:none;">Greenline Starter</a></h3>
-          <p>Author: Jun Park</p>
+          <h3 style="margin-bottom: 8px;">
+            <a href="../hard-game/" class="select-link"><i class="fas fa-leaf"></i> Greenline Starter</a>
+          </h3>
+          <p><i class="fas fa-user-edit" style="font-size: 0.7rem;"></i> Author: Jun Park</p>
         </div>
+
       </div>
 
-      <div style="margin-top: 14px;">
+      <div style="margin-top: 30px; display: flex; gap: 12px;">
         <a class="cta-button" href="../easy-game/">Try Easy (6×6)</a>
-        <a class="cta-button" href="../hard-game/" style="margin-left: 10px;">Try Hard (9×9)</a>
+        <a class="cta-button" href="../hard-game/" style="background: white; color: var(--accent); border: 2px solid var(--accent);">Try Hard (9×9)</a>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
+    <p>&copy; 2026 Garden Sudoku Game.</p>
   </footer>
 </body>
 </html>

@@ -1,85 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudoku Game - Rules</title>
-  <link rel="stylesheet" href="../assets/css/global.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules - Garden Sudoku</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/global.css">
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-logo">
-        <a href="../" class="logo-link">Sudoku</a>
-      </div>
 
-      <ul class="navbar-menu">
-        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="../selection/" class="nav-link">Play</a></li>
-        <li class="nav-item"><a href="../rules/" class="nav-link active">Rules</a></li>
-        <li class="nav-item"><a href="../high-scores/" class="nav-link">High Scores</a></li>
-        <li class="nav-item"><a href="../login/" class="nav-link">Login</a></li>
-        <li class="nav-item"><a href="../register/" class="nav-link">Register</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../" class="logo-link">
+                <i class="fas fa-seedling"></i> Garden Sudoku
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="../" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../selection/" class="nav-link"><i class="fas fa-play"></i> Play</a></li>
+                <li><a href="../rules/" class="nav-link active"><i class="fas fa-book-open"></i> Rules</a></li>
+                <li><a href="../high-scores/" class="nav-link"><i class="fas fa-trophy"></i> High Scores</a></li>
+                <li><a href="../login/" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="../register/" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <main class="main-content">
-    <section class="features">
-      <h1 class="page-title">Rules</h1>
+    <main class="main-content">
+        <div class="selection-box" style="background: rgba(52, 211, 153, 0.05); padding: 30px; border-radius: 24px; border: 1px solid var(--line); position: relative;">
+            <h1 class="page-title" style="text-align: left;"><i class="fas fa-scroll"></i> How to Play</h1>
+            <p style="color: var(--text); opacity: 0.8; margin-bottom: 30px;">Follow these simple rules to master the garden of numbers.</p>
 
-      <div class="feature-card">
-        <h2 style="margin-top:0;">Sudoku Basics</h2>
-        <p style="color: rgba(229,231,235,.72); line-height:1.6;">
-          Sudoku is a logic puzzle played on a grid. Your goal is to fill in the empty cells so that each row and column
-          contains each number exactly once.
-        </p>
+            <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div class="feature-card">
+                    <h3><i class="fas fa-th"></i> The Grid</h3>
+                    <p>A standard 9x9 Sudoku grid is made of 3x3 subgrids. Some cells are pre-filled as "fixed" numbers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-pencil-alt"></i> Filling Cells</h3>
+                    <p>Each row, column, and 3x3 box must contain all numbers from 1 to 9 without any repetition.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-check-circle"></i> Win Condition</h3>
+                    <p>The game ends when all empty cells are filled correctly according to the logic rules.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-clock"></i> Scoring</h3>
+                    <p>Your score is based on the difficulty level and the time taken to complete the puzzle.</p>
+                </div>
+            </div>
 
-        <h3>Hard Mode (9×9)</h3>
-        <p style="color: rgba(229,231,235,.72); line-height:1.6;">
-          Use digits 1–9. Each 3×3 subgrid must also contain the digits 1–9 exactly once.
-        </p>
+            <div style="margin-top: 30px; display: flex; justify-content: center;">
+                <a href="../selection/" class="cta-button">Ready to Play?</a>
+            </div>
 
-        <h3>Easy Mode (6×6)</h3>
-        <p style="color: rgba(229,231,235,.72); line-height:1.6;">
-          Use digits 1–6. Each subgrid (2×3) must contain the digits 1–6 exactly once.
-        </p>
+            <div class="credits" style="margin-top: 40px; padding-top: 20px; border-top: 1px dashed var(--line); display: flex; justify-content: flex-end; gap: 15px; font-size: 0.75rem; opacity: 0.7;">
+                <span style="font-weight: 700;">Made by YourName:</span>
+                <a href="mailto:example@email.com" class="nav-link" style="padding:0; display:inline;"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com" target="_blank" class="nav-link" style="padding:0; display:inline;"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com" target="_blank" class="nav-link" style="padding:0; display:inline;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </main>
 
-        <h3>Tips</h3>
-        <ul style="color: rgba(229,231,235,.72); line-height:1.7; margin-top:8px;">
-          <li>Start with rows/columns that have the most fixed numbers.</li>
-          <li>Eliminate candidates using row/column/subgrid constraints.</li>
-          <li>Work slowly and verify each placement.</li>
-        </ul>
-      </div>
+    <footer class="footer">
+        <p>&copy; 2026 Garden Sudoku Game.</p>
+    </footer>
 
-      <div class="feature-card" style="margin-top:12px;">
-        <h2 style="margin-top:0;">Credits</h2>
-        <p style="color: rgba(229,231,235,.72); line-height:1.6;">
-          Made by <span style="font-weight:800; color:#e5e7eb;">Your Name</span>
-        </p>
-        <p style="color: rgba(229,231,235,.72); line-height:1.7; margin:0;">
-          Email:
-          <a href="mailto:yourname@example.com" class="nav-link" style="padding:0; border:none;">yourname@example.com</a>
-          <br />
-          GitHub:
-          <a href="#" class="nav-link" style="padding:0; border:none;">https://github.com/yourname</a>
-          <br />
-          LinkedIn:
-          <a href="#" class="nav-link" style="padding:0; border:none;">https://linkedin.com/in/yourname</a>
-        </p>
-      </div>
-
-      <div style="margin-top:14px;">
-        <a class="cta-button" href="../selection/">Play</a>
-        <a class="cta-button" href="../high-scores/" style="margin-left:10px;">High Scores</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2024 Sudoku Game. All rights reserved.</p>
-  </footer>
 </body>
 </html>

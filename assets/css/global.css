@@ -1,315 +1,236 @@
-:root{
-  --bg:#0f172a;
-  --panel:rgba(17,28,54,.72);
-  --text:#e5e7eb;
-  --muted:rgba(229,231,235,.72);
-  --line:rgba(255,255,255,.14);
-  --line2:rgba(255,255,255,.45);
-  --accent:#60a5fa;
-  --accent2:#34d399;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-  --nav-h:64px;
+/* ============================================================
+   GLOBAL VARIABLES & ROOT SETTINGS
+   ============================================================ */
+:root {
+  --bg: #fdfae7;         /* Cream Background */
+  --text: #2d3e2d;       /* Dark Forest Green Text */
+  --accent: #34d399;     /* Main Theme Mint Green */
+  --muted: #6b7c6b;      /* Muted Green for secondary text */
+  --line: #e2e8d5;       /* Subtle decorative lines */
+  --nav-h: 70px;         /* Fixed Navbar Height */
 }
 
-*{ box-sizing:border-box; }
-html, body{ height:100%; }
+* { box-sizing: border-box; }
 
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
-  background: radial-gradient(1200px 600px at 10% 0%, #1f2a52 0%, var(--bg) 55%);
-  color:var(--text);
+body {
+  margin: 0;
+  font-family: 'DynaPuff', system-ui, sans-serif; 
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-/* =========================
-   NAVBAR (fixed)
-========================= */
-.navbar{
+/* ============================================================
+   NAVBAR STYLES (Synchronized with Feature Cards)
+   ============================================================ */
+.navbar {
   position: fixed;
-  top:0; left:0; right:0;
+  top: 0; 
+  left: 0; 
+  right: 0;
   height: var(--nav-h);
-  z-index: 10;
-
-  background: rgba(8,12,26,.78);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
+  z-index: 100;
+  /* Transparent green background with blur effect */
+  background: rgba(52, 211, 153, 0.15); 
+  backdrop-filter: blur(8px);
+  /* Matching border-style with feature cards */
+  border-bottom: 1px solid rgba(52, 211, 153, 0.3);
+  display: flex;
+  align-items: center;
 }
 
-.navbar-container{
-  height: 100%;
-  max-width: 1050px;
+.navbar-container {
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 16px;
-
-  display:flex;
-  align-items:center;       /* rubric: align-items */
-  justify-content:space-between;
-  gap: 12px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo-link{
-  text-decoration:none;
-  color: var(--text);
-  font-weight: 800;
-  letter-spacing:.4px;
-}
-
-.navbar-menu{
-  list-style:none;
-  display:flex;              /* rubric: flex */
-  align-items:center;
-  gap: 10px;
-  margin:0;
-  padding:0;
-  max-width: 70vw;
-  overflow-x: auto;
-}
-
-.nav-item{ margin:0; padding:0; }
-
-.nav-link{
-  display:inline-flex;
-  align-items:center;
-  padding: 8px 10px;
-  border-radius: 10px;
-
-  text-decoration:none;
-  color: rgba(229,231,235,.86);
-
-  border: 1px solid transparent;
-  transition: transform .15s ease, background-color .15s ease, border-color .15s ease; /* rubric: transition */
-}
-
-.nav-link:hover{ /* rubric: pseudo (#1) */
-  background: rgba(96,165,250,.12);
-  border-color: rgba(96,165,250,.25);
-  transform: translateY(-1px); /* rubric: transform */
-}
-
-.nav-link.active{
-  background: rgba(52,211,153,.12);
-  border-color: rgba(52,211,153,.35);
-  color: var(--text);
-}
-
-/* =========================
-   MAIN LAYOUT
-========================= */
-.main-content{
-  max-width: 1050px;
-  margin: 0 auto;           /* rubric: margin */
-  padding: calc(var(--nav-h) + 22px) 16px 28px; /* rubric: padding */
-}
-
-.hero{
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  padding: 18px;
-}
-
-.hero h1{
-  margin: 6px 0 8px;
-  font-size: clamp(28px, 2.6vw, 40px);
-}
-
-.hero p{
-  margin: 0 0 14px;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.cta-button{
-  display:inline-block;
-  text-decoration:none;
+.logo-link {
+  text-decoration: none;
   color: var(--text);
   font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
 
-  background: rgba(96,165,250,.14);
-  border: 1px solid rgba(96,165,250,.35);
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0; 
+  padding: 0;
+}
+
+.nav-link { 
+  text-decoration: none; 
+  color: var(--text); 
+  font-weight: 600; 
+  font-size: 0.9rem;
+  padding: 8px 12px; 
   border-radius: 12px;
-  padding: 10px 12px;
-
-  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
-.cta-button:hover{
-  transform: translateY(-1px);
-  background: rgba(96,165,250,.20);
+/* Icon colors using theme accent green */
+.nav-link i, .logo-link i {
+  margin-right: 8px;
+  color: var(--accent);
+  transition: color 0.3s ease;
 }
 
-/* =========================
-   FEATURES
-========================= */
-.features{
-  margin-top: 16px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  padding: 18px;
+/* Hover state for navigation links */
+.nav-link:hover { 
+  background: var(--accent); 
+  color: white; 
 }
 
-.features h2{
-  margin: 6px 0 14px;
+.nav-link:hover i {
+  color: white;
 }
 
-.features-grid{
-  display:grid;                 /* rubric: grid */
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.feature-card{
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 14px;
-}
-
-.feature-card h3{ margin: 0 0 8px; }
-.feature-card p{
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/* pseudo (#2) */
-.feature-card:first-child{
-  border-color: rgba(52,211,153,.28);
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer{
-  max-width: 1050px;
+/* ============================================================
+   MAIN LAYOUT & HERO SECTION
+   ============================================================ */
+.main-content {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 14px 16px 24px;
-  color: rgba(229,231,235,.62);
-  text-align: center;
+  padding: calc(var(--nav-h) + 60px) 20px 40px;
 }
 
-/* =========================
-   SHARED FORM STYLES (for login/register)
-========================= */
-.form-card{
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.hero-text { flex: 1.2; }
+.hero-figure { flex: 1; }
+
+.hero-text h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--accent);
+  color: white;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover { 
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   FEATURE CARDS & SELECTION LINKS
+   ============================================================ */
+.features {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Information cards (Non-clickable items) */
+.feature-card {
   padding: 18px;
-}
-
-.form-field{
-  display:grid;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.form-field label{
-  color: rgba(229,231,235,.78);
-}
-
-.form-field input{
-  width:100%;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.04);
-  color: var(--text);
-}
-
-.form-field input:focus{
-  outline: 2px solid rgba(52,211,153,.55);
-  outline-offset: 2px;
-}
-
-.btn{
-  margin-top: 14px;
-  border: 1px solid rgba(96,165,250,.35);
-  background: rgba(96,165,250,.12);
-  color: var(--text);
-  padding: 10px 12px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
-}
-
-.btn:hover{
-  transform: translateY(-1px);
-  background: rgba(96,165,250,.18);
-}
-
-/* =========================
-   SUDOKU BOARD (for easy/hard pages)
-========================= */
-.board{
-  display:grid;
-  border: 1px solid var(--line2);
+  background: rgba(52, 211, 153, 0.08); 
+  border: 1px solid rgba(52, 211, 153, 0.3);
   border-radius: 16px;
-  overflow:hidden;
-  background: rgba(255,255,255,.02);
+  text-align: left; 
+  transition: all 0.3s ease;
 }
 
-.board--9{ grid-template-columns: repeat(9, 1fr); }
-.board--6{ grid-template-columns: repeat(6, 1fr); }
+.feature-card h3 { margin: 0 0 5px; font-size: 1rem; color: var(--accent); }
+.feature-card p { margin: 0; font-size: 0.8rem; opacity: 0.9; }
 
-.cell{
-  width:100%;
-  aspect-ratio: 1/1;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.03);
+/* Interactive links for level selection */
+.select-link {
+  text-decoration: none;
+  color: var(--accent); 
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.select-link i {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.feature-card:hover {
+  background: rgba(52, 211, 153, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   SUDOKU BOARD - GRID LOGIC
+   ============================================================ */
+.grid-6x6 {
+  display: grid;
+  grid-template-columns: repeat(6, 50px);
+  grid-template-rows: repeat(6, 50px);
+  border: 4px solid var(--text); /* Main outer border */
+  background-color: var(--text); /* Background color forms the grid lines */
+  gap: 1px;
+}
+
+/* Thick borders to separate sub-grids (2x3 blocks for Easy) */
+.grid-6x6 .sudoku-cell:nth-child(3n) {
+  border-right: 3px solid var(--text);
+}
+
+.grid-6x6 .sudoku-cell:nth-child(n+7):nth-child(-n+12),
+.grid-6x6 .sudoku-cell:nth-child(n+19):nth-child(-n+24) {
+  border-bottom: 3px solid var(--text);
+}
+
+/* Styling for individual Sudoku cells */
+.sudoku-cell {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: none;
+  text-align: center;
+  font-family: 'DynaPuff', sans-serif;
+  font-size: 1.4rem;
   color: var(--text);
-  text-align:center;
-  font-weight:700;
-  padding:0;
+  outline: none;
 }
 
-.cell:hover{ background: rgba(52,211,153,.08); }
-.cell:focus{ outline: 2px solid rgba(52,211,153,.55); outline-offset: -2px; }
-
-.cell.fixed{
-  background: rgba(96,165,250,.10);
-  color: rgba(229,231,235,.95);
-}
-
-/* 9x9 thick lines */
-.board--9 .cell:nth-child(9n+3),
-.board--9 .cell:nth-child(9n+6){ border-right: 2px solid var(--line2); }
-.board--9 .cell:nth-child(n+19):nth-child(-n+27),
-.board--9 .cell:nth-child(n+46):nth-child(-n+54){ border-bottom: 2px solid var(--line2); }
-
-/* 6x6 (2x3 blocks) thick lines */
-.board--6 .cell:nth-child(6n+3){ border-right: 2px solid var(--line2); }
-.board--6 .cell:nth-child(n+13):nth-child(-n+18),
-.board--6 .cell:nth-child(n+25):nth-child(-n+30){ border-bottom: 2px solid var(--line2); }
-
-/* =========================
-   MOBILE (iPhone 12 Pro width ~390px)
-========================= */
-@media (max-width: 430px){ /* rubric: media query */
-  :root{ --nav-h: 74px; }
-
-  .navbar{
-    top:auto;
-    bottom:0;
-    border-bottom:none;
-    border-top: 1px solid var(--line);
-  }
-
-  .main-content{
-    padding-top: 18px;
-    padding-bottom: calc(var(--nav-h) + 18px);
-  }
-
-  .features-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .nav-link{
-    padding: 8px 9px;
-    white-space: nowrap;
-  }
+/* ============================================================
+   RESPONSIVE DESIGN (Mobile Adaptations)
+   ============================================================ */
+@media (max-width: 850px) {
+  .hero-split { flex-direction: column; text-align: center; }
+  .features-grid { grid-template-columns: 1fr; max-width: 320px; }
+  .navbar-menu { display: none; } /* Navigation menu hidden on mobile */
 }
