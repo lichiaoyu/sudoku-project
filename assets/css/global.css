@@ -8,15 +8,6 @@
   --green-hover: rgb(60, 100, 70);
   --green-light: rgb(240, 245, 235);
   --green-border: rgb(150, 180, 140);
-
-  /* --bg:#0f172a; */
-  --panel:rgba(17,28,54,.72);
-  --text:#e5e7eb;
-  /* --muted:rgba(229,231,235,.72); */
-  --line:rgba(255,255,255,.14);
-  --line2:rgba(255,255,255,.45);
-  /* --accent:#60a5fa;
-  --accent2:#34d399; */
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --nav-h:64px;
 }
@@ -28,7 +19,7 @@ body{
   margin:0;
   font-family: 'DynaPuff', ui-sans-serif, system-ui, sans-serif;
   background: var(--bg-cream);
-  color:var(--text);
+  color:var(--green-text);
 }
 
 /* =========================
@@ -617,7 +608,7 @@ body{
     top:auto;
     bottom:0;
     border-bottom:none;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--green-border);
   }
 
   .main-content{
