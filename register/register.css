@@ -1,3 +1,11 @@
-/* Register page tweaks */
-.form-card{ max-width: 520px; margin: 0 auto; }
-.btn{ width: 100%; }
+/* register/register.css */
+
+/* Same layout feel as login */
+.form-card {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.button-group {
+  justify-content: center;
+}

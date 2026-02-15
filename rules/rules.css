@@ -1,3 +1,12 @@
-/* Rules page tweaks */
-.feature-card ul{ padding-left: 18px; }
-.feature-card li{ margin: 6px 0; }
+/* rules/rules.css */
+
+/* Keep rules readable on wide screens */
+.rules-card {
+  max-width: 820px;
+  margin: 0 auto 16px;
+}
+
+/* Make links look consistent and not too loud */
+.contact-links a {
+  word-break: break-word;
+}

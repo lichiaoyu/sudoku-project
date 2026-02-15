@@ -1,11 +1,15 @@
+<!-- rules/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudoku Game - Rules</title>
+
+  <!-- Common CSS -->
   <link rel="stylesheet" href="../assets/css/global.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="./rules.css" />
 </head>
 
 <body>
@@ -13,48 +17,27 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="./" class="logo-link">
-          <i data-lucide="grid-3x3"></i>
-          Sudoku
-        </a>
+        <a href="../" class="logo-link">Sudoku</a>
       </div>
 
       <ul class="navbar-menu">
         <li class="nav-item">
-          <a href="../" class="nav-link">
-            <i data-lucide="house"></i>
-            <span>Home</span>
-          </a>
+          <a href="../" class="nav-link"><span>Home</span></a>
         </li>
         <li class="nav-item">
-          <a href="../selection/" class="nav-link">
-            <i data-lucide="gamepad-2"></i>
-            <span>Play</span>
-          </a>
+          <a href="../selection/" class="nav-link"><span>Play</span></a>
         </li>
         <li class="nav-item">
-          <a href="../rules/" class="nav-link active">
-            <i data-lucide="notepad-text"></i>
-            <span>Rules</span>
-          </a>
+          <a href="../rules/" class="nav-link active"><span>Rules</span></a>
         </li>
         <li class="nav-item">
-          <a href="../high-scores/" class="nav-link">
-            <i data-lucide="trophy"></i>
-            <span>High Scores</span>
-          </a>
+          <a href="../high-scores/" class="nav-link"><span>High Scores</span></a>
         </li>
         <li class="nav-item">
-          <a href="../login/" class="nav-link">
-            <i data-lucide="log-in"></i>
-            <span>Login</span>
-          </a>
+          <a href="../login/" class="nav-link"><span>Login</span></a>
         </li>
         <li class="nav-item">
-          <a href="../register/" class="nav-link">
-            <i data-lucide="user-round-plus"></i>
-            <span>Register</span>
-          </a>
+          <a href="../register/" class="nav-link"><span>Register</span></a>
         </li>
       </ul>
     </div>
@@ -63,6 +46,7 @@
   <main class="main-content">
     <section class="page-section">
       <h1 class="page-title">Rules</h1>
+      <p class="page-subtitle">How to play Sudoku (mock rules page).</p>
 
       <div class="rules-card">
         <h2>Sudoku Basics</h2>
@@ -72,14 +56,10 @@
         </p>
 
         <h3>Hard Mode (9×9)</h3>
-        <p>
-          Use digits 1–9. Each 3×3 subgrid must also contain the digits 1–9 exactly once.
-        </p>
+        <p>Use digits 1–9. Each 3×3 subgrid must also contain the digits 1–9 exactly once.</p>
 
         <h3>Easy Mode (6×6)</h3>
-        <p>
-          Use digits 1–6. Each subgrid (2×3) must contain the digits 1–6 exactly once.
-        </p>
+        <p>Use digits 1–6. Each subgrid (2×3) must contain the digits 1–6 exactly once.</p>
 
         <h3>Tips</h3>
         <ul>
@@ -94,12 +74,16 @@
         <p>
           Made by <span class="author-name">Chiao-Yu Li, Xinyi Zhang, Tianlu Xu</span>
         </p>
+
         <p class="contact-links">
           Email:
-          <a href="mailto:yourname@example.com" class="contact-link">sudoku@gamemail.com</a>
+          <a href="mailto:sudoku@gamemail.com" class="contact-link">sudoku@gamemail.com</a>
           <br />
           GitHub:
-          <a href="#" class="contact-link">https://github.com/lichiaoyu/sudoku-project</a>
+          <a href="https://github.com/lichiaoyu/sudoku-project" class="contact-link">github.com/lichiaoyu/sudoku-project</a>
+          <br />
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/sudokugame/" class="contact-link">linkedin.com/in/sudokugame</a>
         </p>
       </div>
 
@@ -113,9 +97,5 @@
   <footer class="footer">
     <p>&copy; 2026 Sudoku Game. All rights reserved.</p>
   </footer>
-
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>

@@ -1,11 +1,15 @@
+<!-- selection/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudoku Game - Selection</title>
+
+  <!-- Common CSS -->
   <link rel="stylesheet" href="../assets/css/global.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="./selection.css" />
 </head>
 
 <body>
@@ -13,54 +17,32 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="../" class="logo-link">
-          <i data-lucide="grid-3x3"></i>
-          Sudoku
-        </a>
+        <a href="../" class="logo-link">Sudoku</a>
       </div>
 
       <ul class="navbar-menu">
         <li class="nav-item">
-          <a href="../" class="nav-link">
-            <i data-lucide="house"></i>
-            <span>Home</span>
-          </a>
+          <a href="../" class="nav-link"><span>Home</span></a>
         </li>
         <li class="nav-item">
-          <a href="../selection/" class="nav-link active">
-            <i data-lucide="gamepad-2"></i>
-            <span>Play</span>
-          </a>
+          <a href="../selection/" class="nav-link active"><span>Play</span></a>
         </li>
         <li class="nav-item">
-          <a href="../rules/" class="nav-link">
-            <i data-lucide="notepad-text"></i>
-            <span>Rules</span>
-          </a>
+          <a href="../rules/" class="nav-link"><span>Rules</span></a>
         </li>
         <li class="nav-item">
-          <a href="../high-scores/" class="nav-link">
-            <i data-lucide="trophy"></i>
-            <span>High Scores</span>
-          </a>
+          <a href="../high-scores/" class="nav-link"><span>High Scores</span></a>
         </li>
         <li class="nav-item">
-          <a href="../login/" class="nav-link">
-            <i data-lucide="log-in"></i>
-            <span>Login</span>
-          </a>
+          <a href="../login/" class="nav-link"><span>Login</span></a>
         </li>
         <li class="nav-item">
-          <a href="../register/" class="nav-link">
-            <i data-lucide="user-round-plus"></i>
-            <span>Register</span>
-          </a>
+          <a href="../register/" class="nav-link"><span>Register</span></a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main class="main-content">
     <section class="page-section">
       <h1 class="page-title">Game Selection</h1>
@@ -110,9 +92,5 @@
   <footer class="footer">
     <p>&copy; 2026 Sudoku Game. All rights reserved.</p>
   </footer>
-
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>

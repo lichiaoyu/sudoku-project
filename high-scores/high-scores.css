@@ -1,3 +1,24 @@
-/* High scores page tweaks */
-.feature-card table{ font-size: 15px; }
-.feature-card th{ color: rgba(229,231,235,.92); }
+/* high-scores/high-scores.css */
+
+/* Make the numeric columns read nicely */
+.score-table th:nth-child(2),
+.score-table td:nth-child(2),
+.score-table th:nth-child(3),
+.score-table td:nth-child(3) {
+  text-align: right;
+}
+
+/* Slight row separation (works with your existing hover too) */
+.score-table tbody tr:nth-child(even) td {
+  background: rgba(240, 245, 235, 0.45);
+}
+
+/* Keep table usable on small screens */
+@media (max-width: 430px) {
+  .score-table th:nth-child(2),
+  .score-table td:nth-child(2),
+  .score-table th:nth-child(3),
+  .score-table td:nth-child(3) {
+    text-align: left;
+  }
+}

@@ -1,3 +1,43 @@
-/* Selection page tweaks */
-.features-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.feature-card h3{ margin-bottom: 6px; }
+/* selection/selection.css */
+
+.selection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Card link */
+.game-card {
+  background: var(--green-light);
+  border: 1px solid var(--green-border);
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(96, 128, 82, 0.2);
+  border-color: var(--green-medium);
+}
+
+.game-card h3 {
+  color: var(--green-medium);
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.game-author {
+  color: var(--green-text);
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 430px) {
+  .selection-grid {
+    grid-template-columns: 1fr;
+  }
+}
